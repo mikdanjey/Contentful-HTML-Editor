@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "name": "contentful-html-editor",
+  "builds": [
+    {
+      "src": "server.js",
+      "use": "@now/node",
+      "config": {
+        "maxLambdaSize": "60mb"
+      }
+    }
+  ],
+  "routes": [
+    {
+      "src": "/.*",
+      "dest": "/server.js"
+    }
+  ]
+}
