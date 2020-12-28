@@ -8,6 +8,13 @@ app.get('/', (_, res) => {
   res.sendFile(path.join(__dirname, './app.html'));
 });
 
-app.listen(80, "0.0.0.0", () => {
-  console.log(`Listening on 80.`);
+// local variables
+const PORT = 5000;
+
+app.listen(PORT, error => {
+  if (error) {
+    console.error(error);
+  } else {
+    console.info("==> 🌎 Listening on port %s.", PORT);
+  }
 });

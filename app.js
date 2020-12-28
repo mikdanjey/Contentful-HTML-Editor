@@ -53,6 +53,7 @@ class Config extends Component {
           <Option value={DEFAULT_ANIMAL}>Cat</Option>
           <Option value="dog">Dog</Option>
           <Option value="owl">Owl</Option>
+          <Option value="cow">cow</Option>
         </SelectField>
       </Form>
     );

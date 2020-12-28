@@ -13,6 +13,7 @@
       "node": ">10.x"
     },
     "scripts": {
+      "deploy": "vercel --prod",
       "start": "webpack && node server.js"
     },
     "dependencies": {
