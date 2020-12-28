@@ -38,7 +38,7 @@ class Config extends Component {
   render () {
     return (
       <Form id="app-config">
-        <Heading>Daily Animal app</Heading>
+        <Heading>Test App</Heading>
         <Note noteType="primary" title="Mani">
           Sample
         </Note>
