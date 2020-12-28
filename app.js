@@ -5,37 +5,36 @@ import { init, locations } from 'contentful-ui-extensions-sdk';
 import '@contentful/forma-36-react-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
 import { Heading, Note, Form, SelectField, Option } from '@contentful/forma-36-react-components';
+import { RichTextEditor, renderRichTextDialog } from '@contentful/field-editor-rich-text';
 
 const DEFAULT_ANIMAL = 'cat';
 
 init(sdk => {
   const root = document.getElementById('root');
-
-  if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
-    render(<Config sdk={sdk} />, root);
-  } else {
-    render(<AnimalPicture sdk={sdk} />, root);
-    sdk.window.startAutoResizer();
+  if (sdk.location.is(locations.LOCATION_DIALOG)) {
+    render(renderRichTextDialog(sdk), root);
+  } else if (sdk.location.is(locations.LOCATION_ENTRY_FIELD)) {
+    render(<RichTextEditor sdk={sdk} value={"Hi"} />, root);
   }
 });
 
 class Config extends Component {
-  constructor (props) {
+  constructor(props) {
     super(props);
     this.state = { parameters: {} };
     this.app = this.props.sdk.app;
     this.app.onConfigure(() => this.onConfigure());
   }
-  
-  async componentDidMount () {
+
+  async componentDidMount() {
     const parameters = await this.app.getParameters();
     this.setState(
       { parameters: parameters || {} },
       () => this.app.setReady()
     );
   }
-  
-  render () {
+
+  render() {
     return (
       <Form id="app-config">
         <Heading>Test App</Heading>
@@ -59,7 +58,7 @@ class Config extends Component {
     );
   }
 
-  async onConfigure () {
+  async onConfigure() {
     const { items: contentTypes } = await this.props.sdk.space.getContentTypes();
     const contentTypeIds = contentTypes.map(ct => ct.sys.id)
 
@@ -74,9 +73,9 @@ class Config extends Component {
   }
 }
 
-function AnimalPicture ({ sdk }) {
+function AnimalPicture({ sdk }) {
   const animal = sdk.parameters.installation.animal || DEFAULT_ANIMAL;
   const src = `https://source.unsplash.com/250x250/?${animal}`;
-  
+
   return <img alt={animal} id="animal-picture" src={src} />
 }
