@@ -40,7 +40,7 @@ class Config extends Component {
       <Form id="app-config">
         <Heading>Daily Animal app</Heading>
         <Note noteType="primary" title="Mani">
-          Make editors in this space a little bit happier with a cute animal picture in the entry editor sidebar.
+          Sample
         </Note>
         <SelectField
           required
