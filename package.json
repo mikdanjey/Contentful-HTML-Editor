@@ -14,8 +14,9 @@
   },
   "scripts": {
     "deploy": "vercel --prod",
+    "del": "rm -rf dist",
     "start": "webpack && node server.js",
-    "dev": "webpack && nodemon server.js"
+    "dev": "yarn del && webpack && nodemon server.js"
   },
   "dependencies": {
     "@babel/core": "7.6.0",
