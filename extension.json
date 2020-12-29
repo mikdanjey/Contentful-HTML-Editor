@@ -1,5 +1,5 @@
 {
-  "id": "entry-editor-extension",
-  "name": "entry-editor-extension",
+  "id": "contentful-html-editor",
+  "name": "contentful-html-editor",
   "srcdoc": "./build/index.html"
 }
