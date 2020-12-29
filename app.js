@@ -16,7 +16,7 @@ init(sdk => {
   if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
     render(<AppCustomConfig sdk={sdk} />, root);
   } else {
-    render(<MultipleLineEditor isInitiallyDisabled={false} sdk={sdk} value={"Mikdan Text"} />, root);
+    render(<textarea type="text" isInitiallyDisabled={false} sdk={sdk} value={"Mikdan Text"} />, root);
     sdk.window.startAutoResizer();
   }
 });
@@ -55,6 +55,7 @@ class AppCustomConfig extends Component {
           <Option value={DEFAULT_ANIMAL}>Cat</Option>
           <Option value="dog">Dog</Option>
           <Option value="owl">Owl</Option>
+          <Option value="tiger">Tiger</Option>
         </SelectField>
       </Form>
     );
