@@ -44,8 +44,10 @@
         setup: function (editor) {
           editor.on('NodeChange', function (e) {
             let getContent = editor.getContent().trim();
-            console.log({ data: getContent });
-            api.field.setValue(getContent);
+            if (api.field.getValue().trim() !== getContent) {
+              console.log({ data: getContent });
+              api.field.setValue(getContent);
+            }
           });
         },
         plugins: 'code fullscreen table autosave',
@@ -54,7 +56,6 @@
         height: 500,
         toolbar_mode: 'floating',
       });
-
     });
   </script>
 </body>
