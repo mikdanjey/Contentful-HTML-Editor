@@ -20,3 +20,8 @@ https://contentful-field-editors.netlify.app
 https://github.com/contentful/field-editors/blob/master/extensions/rich-text-extension/src/index.tsx
 https://www.contentful.com/help/entry-editor/#slug
 https://www.contentful.com/developers/docs/extensibility/ui-extensions/use-cases
+
+
+https://www.contentful.com/developers/docs/extensibility/ui-extensions/examples
+https://github.com/contentful/extensions/blob/master/samples/ace-editor/extension.json
+https://contentful-field-editors.netlify.app/shared/default-field-editors
