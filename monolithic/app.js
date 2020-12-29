@@ -13,7 +13,7 @@ app.get('/test', (_, res) => {
 });
 
 // local variables
-const PORT = 5000;
+const PORT = 8082;
 app.listen(PORT, error => {
   if (error) {
     console.error(error);
