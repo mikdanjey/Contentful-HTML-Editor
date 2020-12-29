@@ -3,11 +3,14 @@ import { render } from 'react-dom';
 
 import { init, locations } from 'contentful-ui-extensions-sdk';
 import { MultipleLineEditor } from '@contentful/field-editor-multiple-line';
+import { FieldAPI, LocalesAPI } from '@contentful/field-editor-shared';
 import { Heading, Note, Form, SelectField, Option } from '@contentful/forma-36-react-components';
-
+import { FieldConnector } from '@contentful/field-editor-shared';
 
 import '@contentful/forma-36-react-components/dist/styles.css';
 import '@contentful/forma-36-fcss/dist/styles.css';
+import '@contentful/field-editor-date/styles/styles.css';
+
 
 const DEFAULT_ANIMAL = 'cat';
 
@@ -16,7 +19,22 @@ init(sdk => {
   if (sdk.location.is(locations.LOCATION_APP_CONFIG)) {
     render(<AppCustomConfig sdk={sdk} />, root);
   } else {
-    render(<textarea type="text" isInitiallyDisabled={false} sdk={sdk} value={"Mikdan Text"} />, root);
+    render(
+      <FieldConnector field={sdk.field}>
+        {({ disabled, value, setValue }) => {
+          return (
+            <div>
+              <div>{value ? 'I am true' : 'I am false'}</div>
+              <button onClick={() => {
+                setValue(!value)
+              }}>
+                Toggle
+              </button>
+            </div>
+          )
+        }}
+      </FieldConnector>
+      , root);
     sdk.window.startAutoResizer();
   }
 });
