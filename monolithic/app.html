@@ -38,14 +38,13 @@
       // Get the field value from the UI Extension SDK
       var value = api.field.getValue() || '';
       document.getElementById('mikdantechEditor').textContent = value;
-
       tinymce.init({
         selector: 'textarea#mikdantechEditor',
         setup: function (editor) {
           editor.on('NodeChange', function (e) {
             let getContent = editor.getContent().trim();
             if (api.field.getValue().trim() !== getContent) {
-              console.log({ data: getContent });
+              // console.log({ data: getContent });
               api.field.setValue(getContent);
             }
           });
