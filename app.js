@@ -56,6 +56,7 @@ class AppCustomConfig extends Component {
           <Option value="dog">Dog</Option>
           <Option value="owl">Owl</Option>
           <Option value="tiger">Tiger</Option>
+          <Option value="lion">Lion</Option>
         </SelectField>
       </Form>
     );
