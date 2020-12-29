@@ -12,7 +12,11 @@ rm yarn.lock
 rm -rf dist
 rm .DS_Store
 
+npm install -g contentful-cli
+
+contentful login --management-token CFPAT-h30ZKFDhWZcM1UjtuxiXcem6Y-FLlWP9P3mSm7kI14Q
 contentful login --management-token 
+
 
 Ref:
 https://contentful-field-editors.netlify.app/rich-text
