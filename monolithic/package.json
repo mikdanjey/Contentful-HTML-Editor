@@ -1,44 +1,23 @@
 {
-    "name": "contentful-html-editor",
-    "version": "1.0.0",
-    "description": "Developed by Mikdan Tech Solutions",
-    "author": {
-      "name": "Mikdan Tech Solutions",
-      "email": "mikdanjey@gmail.com",
-      "url": "https://www.mikdantech.com"
-    },
-    "copyright": "Copyright 2020 Mikdan Tech Solutions",
-    "license": "MIT",
-    "engines": {
-      "node": ">10.x"
-    },
-    "scripts": {
-      "deploy": "vercel --prod",
-      "del": "rm -rf dist",
-      "start": "webpack && node server.js",
-      "dev": "yarn del && webpack && nodemon server.js"
-    },
-    "dependencies": {
-      "@babel/core": "7.6.0",
-      "@babel/plugin-transform-runtime": "7.6.0",
-      "@babel/preset-env": "7.6.2",
-      "@babel/preset-react": "7.0.0",
-      "@babel/runtime": "7.5.4",
-      "@contentful/field-editor-multiple-line": "^0.9.5",
-      "@contentful/forma-36-fcss": "0.0.31",
-      "@contentful/forma-36-react-components": "3.15.9",
-      "@contentful/forma-36-tokens": "0.4.5",
-      "babel-loader": "8.0.5",
-      "contentful-ui-extensions-sdk": "3.14.3",
-      "css-loader": "3.2.0",
-      "express": "4.17.1",
-      "react": "16.10.1",
-      "react-dom": "16.10.1",
-      "style-loader": "1.0.0",
-      "webpack": "4.41.0",
-      "webpack-cli": "3.3.9"
-    },
-    "devDependencies": {
-      "nodemon": "^2.0.6"
-    }
+  "name": "contentful-html-editor",
+  "version": "1.0.0",
+  "description": "Developed by Mikdan Tech Solutions",
+  "author": {
+    "name": "Mikdan Tech Solutions",
+    "email": "mikdanjey@gmail.com",
+    "url": "https://www.mikdantech.com"
+  },
+  "copyright": "Copyright 2020 Mikdan Tech Solutions",
+  "license": "MIT",
+  "scripts": {
+    "deploy": "vercel --prod",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "dependencies": {
+    "express": "4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.6"
   }
+}
