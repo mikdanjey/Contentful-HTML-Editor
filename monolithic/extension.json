@@ -1,6 +1,8 @@
 {
-  "id": "ace-editor",
-  "name": "Ace editor",
+  "id": "contentful-html-editor",
+  "name": "Contentful HTML Editor",
   "srcdoc": "./app.html",
-  "fieldTypes": ["Text"]
+  "fieldTypes": [
+    "Text"
+  ]
 }
