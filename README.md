@@ -9,8 +9,12 @@ sudo npm install -g npm-check-updates
 ncu -u
 rm -rf node_modules
 rm yarn.lock
-rm -rf dist
+rm -rf build
 rm .DS_Store
+
+npm install -g contentful-cli
+
+contentful login --management-token CFPAT-h30ZKFDhWZcM1UjtuxiXcem6Y-FLlWP9P3mSm7kI14Q
 
 Ref:
 https://contentful-field-editors.netlify.app/rich-text
@@ -24,4 +28,5 @@ https://www.contentful.com/developers/docs/extensibility/ui-extensions/use-cases
 
 https://www.contentful.com/developers/docs/extensibility/ui-extensions/examples
 https://github.com/contentful/extensions/blob/master/samples/ace-editor/extension.json
+https://github.com/contentful/extensions/tree/master/samples/entry-editor-extension
 https://contentful-field-editors.netlify.app/shared/default-field-editors
