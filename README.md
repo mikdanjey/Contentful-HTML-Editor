@@ -1,10 +1,5 @@
 Contentful HTML Editor
 
-http://localhost:8082/bundle.js
-
-https://contentful-html-editor.vercel.app
-https://contentful-html-editor.vercel.app/bundle.js
-
 sudo npm install -g npm-check-updates
 ncu -u
 rm -rf node_modules
@@ -14,7 +9,7 @@ rm .DS_Store
 
 npm install -g contentful-cli
 
-contentful login --management-token CFPAT-h30ZKFDhWZcM1UjtuxiXcem6Y-FLlWP9P3mSm7kI14Q
+contentful login --management-token 
 
 Ref:
 https://contentful-field-editors.netlify.app/rich-text

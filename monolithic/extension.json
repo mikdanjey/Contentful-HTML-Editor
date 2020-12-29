@@ -3,6 +3,7 @@
   "name": "Contentful HTML Editor",
   "srcdoc": "./app.html",
   "fieldTypes": [
-    "Text"
+    "Text",
+    "RichText"
   ]
 }
