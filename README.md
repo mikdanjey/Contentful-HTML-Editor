@@ -1,6 +1,6 @@
 Contentful HTML Editor
 
-http://localhost:5000/bundle.js
+http://localhost:8082/bundle.js
 
 https://contentful-html-editor.vercel.app
 https://contentful-html-editor.vercel.app/bundle.js
