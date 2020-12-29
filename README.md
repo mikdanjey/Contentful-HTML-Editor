@@ -12,6 +12,8 @@ rm yarn.lock
 rm -rf dist
 rm .DS_Store
 
+contentful login --management-token 
+
 Ref:
 https://contentful-field-editors.netlify.app/rich-text
 https://www.contentful.com/developers/docs/extensibility/app-framework/sdk/#editor
