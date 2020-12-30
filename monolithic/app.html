@@ -44,7 +44,7 @@
           editor.on('NodeChange', function (e) {
             let getContent = editor.getContent().trim();
             if (api.field.getValue().trim() !== getContent) {
-              // console.log({ data: getContent });
+              console.log({ data: getContent });
               api.field.setValue(getContent);
             }
           });
