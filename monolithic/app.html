@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8" />
-  <title>Contentful HTML Editor v1.1.3</title>
+  <title>Contentful HTML Editor v1.1.4</title>
   <link rel="stylesheet" href="https://contentful.github.io/ui-extensions-sdk/cf-extension.css">
 
   <script src="/tinymce/tinymce.min.js"></script>
@@ -43,10 +43,12 @@
         setup: function (editor) {
           editor.on('NodeChange', function (e) {
             let getContent = editor.getContent().trim();
-            if (api.field.getValue().trim() !== getContent) {
-              console.log({ data: getContent });
-              api.field.setValue(getContent);
-            }
+            // if (api.field.getValue().trim() !== getContent) {
+            //   console.log({ data: getContent });
+            //   api.field.setValue(getContent);
+            // }
+            console.log({ data: getContent });
+            api.field.setValue(getContent);
           });
         },
         plugins: 'code fullscreen table wordcount',
